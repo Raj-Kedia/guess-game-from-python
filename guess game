@@ -1,0 +1,16 @@
+import random
+number = random.randint(1, 100)
+count = 0
+user_input = None
+print("I have choose a number and you have to guess it!")
+while user_input != number :
+    user_input = int(input("Guess the number choosen by me: "))
+    if(user_input == number):
+        print(f"Wow, you have choosen the number correctly only in {count+1} times") 
+    else:
+        print("No, this time you didn't get it correct!")
+        if(user_input>number):
+            print("Enter the smaller number")
+        else:
+            print("Enter the greater number")
+    count +=1
